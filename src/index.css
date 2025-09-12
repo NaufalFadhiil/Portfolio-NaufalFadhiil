@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 107, 53, 0.6);
+  }
+}
+
+/* Open to Work - Glow Green */
+@keyframes glow-green {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(92, 230, 92, 0.4), 0 0 20px rgba(92, 230, 92, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(92, 230, 92, 0.8), 0 0 40px rgba(92, 230, 92, 0.4);
+  }
+}
+.animate-glow-green {
+  animation: glow-green 2s ease-in-out infinite;
+}
+
+/* Gradient Move for Name */
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.animate-gradient-move {
+  background-size: 200% 200%;
+  animation: gradient-move 4s ease infinite;
+}
+
+/* Junior Manual QA - Static Gradient Text */
+.text-gradient-blue-grey {
+  background: linear-gradient(90deg, #4a90e2, #c7cad1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Job Tags - Soft Hover Effect */
+.job-tag {
+  background: linear-gradient(90deg, #c7cad1, #a5c4ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+.job-tag:hover {
+  text-shadow: 0 0 8px rgba(165, 196, 255, 0.6);
+  transform: scale(1.05);
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slide-left 0.8s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slide-right 0.8s ease-out forwards;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Efek Tag Current dan Community */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 5px rgba(249,115,22,0.7), 0 0 10px rgba(249,115,22,0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(249,115,22,1), 0 0 40px rgba(249,115,22,0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(249,115,22,0.7), 0 0 10px rgba(249,115,22,0.5);
+  }
+}
+
+/* Delay Classes */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #f97316, #ea580c);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #ea580c, #dc2626);
+}
+
+/* Typography Enhancements */
+.font-display {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Selection Color */
+::selection {
+  background-color: #f97316;
+  color: white;
+}
+
+/* Remove default button styles on mobile */
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none !important;
+  border: none !important;
+}
+
+/* Remove focus outline globally */
+*:focus {
+  outline: none !important;
+}
+
+/* Ensure proper text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
