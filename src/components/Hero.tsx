@@ -43,14 +43,14 @@ const Hero = () => {
             href="#projects"
             className="font-semibold job-tag px-2 rounded cursor-pointer"
           >
-            Junior Manual QA
+            Software Testing / Junior Manual QA
           </a>{' '}
           |{' '}
           <a
             href="#projects"
             className="font-semibold job-tag px-2 rounded cursor-pointer"
           >
-            Flutter Developer
+            Mobile Apps Developer
           </a>
         </h2>
 
@@ -61,8 +61,7 @@ const Hero = () => {
 
         {/* Short Bio */}
         <p className="text-base md:text-lg text-white mb-20 animate-slide-up delay-400">
-          Passionate about software quality, ensuring reliable applications, and
-          eager to grow as a QA Engineer and Developer.
+          Passionate about Software Quality, ensuring reliable applications, and eager to grow as a Quality Assurance Engineer and Apps Developer.
         </p>
 
         {/* Social Links */}
@@ -119,7 +118,29 @@ const Hero = () => {
             >
               <path
                 d="M4.98 3.5a2.5 2.5 0 1 0 0 5.001 2.5 2.5 0 0 0 0-5ZM2 8.5h3.96V21H2V8.5Zm7.5 0h3.7v1.7h.05c.52-.98 1.78-2 3.67-2 
-      3.92 0 4.64 2.58 4.64 5.94V21h-3.96v-5.6c0-1.33-.02-3.05-1.86-3.05-1.86 0-2.15 1.45-2.15 2.95V21H9.5V8.5Z"
+            3.92 0 4.64 2.58 4.64 5.94V21h-3.96v-5.6c0-1.33-.02-3.05-1.86-3.05-1.86 0-2.15 1.45-2.15 2.95V21H9.5V8.5Z"
+              />
+            </svg>
+            {/* Gradient border on hover */}
+            <span className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-orange-500 group-hover:shadow-[0_0_15px_rgba(249,115,22,0.6)] transition-all duration-300"></span>
+          </a>
+
+          {/* INSTAGRAM (Diperbaiki: menggunakan path data SVG yang benar) */}
+          <a
+            href="https://www.instagram.com/nopnau/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-4 rounded-xl text-gray-300 hover:text-white transition-all duration-300 hover:scale-110 relative group bg-gradient-to-tr from-gray-800 to-gray-700
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-7 h-7"
+            >
+              <path 
+                d="M12 0C8.75 0 8.35 0 7.18 0.05C5.8 0.11 4.8 0.53 3.96 0.86C3.12 1.2 2.37 1.73 1.73 2.37C1.09 3.01 0.56 3.76 0.23 4.6C-0.1 5.44 -0.5 6.44 -0.55 7.82C-0.6 8.99 -0.6 9.35 -0.6 12C-0.6 14.65 -0.6 15.01 -0.55 16.18C-0.5 17.56 -0.1 18.56 0.23 19.4C0.56 20.24 1.09 20.99 1.73 21.63C2.37 22.27 3.12 22.8 3.96 23.13C4.8 23.47 5.8 23.89 7.18 23.95C8.35 24 8.75 24 12 24C15.25 24 15.65 24 16.82 23.95C18.2 23.89 19.2 23.47 20.04 23.13C20.88 22.8 21.63 22.27 22.27 21.63C22.91 20.99 23.44 20.24 23.77 19.4C24.1 18.56 24.5 17.56 24.55 16.18C24.6 15.01 24.6 14.65 24.6 12C24.6 9.35 24.6 8.99 24.55 7.82C24.5 6.44 24.1 5.44 23.77 4.6C23.44 3.76 22.91 3.01 22.27 2.37C21.63 1.73 20.88 1.2 20.04 0.86C19.2 0.53 18.2 0.11 16.82 0.05C15.65 0 15.25 0 12 0ZM12 2.2C14.8 2.2 15.15 2.2 16.3 2.25C17.38 2.3 17.9 2.5 18.3 2.7C18.7 2.9 19 3.2 19.3 3.5C19.6 3.8 19.9 4.1 20.1 4.5C20.3 4.9 20.5 5.42 20.55 6.5C20.6 7.65 20.6 8 20.6 12C20.6 16 20.6 16.35 20.55 17.5C20.5 18.58 20.3 19.1 20.1 19.5C19.9 19.9 19.6 20.2 19.3 20.5C19 20.8 18.7 21.1 18.3 21.3C17.9 21.5 17.38 21.7 16.3 21.75C15.15 21.8 14.8 21.8 12 21.8C9.2 21.8 8.85 21.8 7.7 21.75C6.62 21.7 6.1 21.5 5.7 21.3C5.3 21.1 5 20.8 4.7 20.5C4.4 20.2 4.1 19.9 3.9 19.5C3.7 19.1 3.5 18.58 3.5 17.5C3.5 16.35 3.5 16 3.5 12C3.5 8 3.5 7.65 3.5 6.5C3.5 5.42 3.7 4.9 3.9 4.5C4.1 4.1 4.4 3.8 4.7 3.5C5 3.2 5.3 2.9 5.7 2.7C6.1 2.5 6.62 2.3 7.7 2.25C8.85 2.2 9.2 2.2 12 2.2ZM12 6.5C8.95 6.5 6.5 8.95 6.5 12C6.5 15.05 8.95 17.5 12 17.5C15.05 17.5 17.5 15.05 17.5 12C17.5 8.95 15.05 6.5 12 6.5ZM12 15.6C9.9 15.6 8.4 14.1 8.4 12C8.4 9.9 9.9 8.4 12 8.4C14.1 8.4 15.6 9.9 15.6 12C15.6 14.1 14.1 15.6 12 15.6ZM18.7 3.95C18.15 3.95 17.7 4.4 17.7 4.95C17.7 5.5 18.15 5.95 18.7 5.95C19.25 5.95 19.7 5.5 19.7 4.95C19.7 4.4 19.25 3.95 18.7 3.95Z" 
               />
             </svg>
             {/* Gradient border on hover */}

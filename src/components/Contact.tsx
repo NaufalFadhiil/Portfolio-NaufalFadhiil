@@ -1,5 +1,4 @@
 import React from 'react';
-// Pastikan Mail dan Send tetap diimpor untuk tombol-tombol
 import { Mail, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
@@ -9,12 +8,12 @@ const Contact = () => {
       label: 'Email',
       value: 'naufalfadhiil2206@gmail.com',
       href: 'https://mail.google.com/mail/u/0/?tf=cm&fs=1&to=naufalfadhiil2206@gmail.com',
-      color: 'from-white-200 to-white-300',
+      color: 'bg-white', // ✅ Diperbaiki: Menggunakan kelas background solid
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       label: 'Location',
-      value: 'Gedebage, Kota Bandung, Indonesia',
+      value: 'Bandung, Indonesia',
       href: '#',
       color: 'from-green-400 to-green-600',
     },
@@ -60,9 +59,9 @@ const Contact = () => {
             >
               {/* Icon */}
               <div
-                className={`inline-flex p-4 rounded-full bg-gradient-to-br ${contact.color} mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                // Logika yang memastikan bg-white digunakan tanpa bg-gradient-to-br
+                className={`inline-flex p-4 rounded-full ${contact.color.startsWith('bg-') ? contact.color : 'bg-gradient-to-br ' + contact.color} mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
               >
-                {/* Hapus class text-white dari sini */}
                 <div className="">{contact.icon}</div>
               </div>
 
@@ -96,8 +95,8 @@ const Contact = () => {
             </h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               I'm always open to discussing new opportunities, collaborative
-              projects, or sharing insights about Flutter development and
-              quality assurance.
+              projects, or sharing insights about Mobile development and
+              Software Testing or Quality Assurance.
             </p>
             <a
               href="https://mail.google.com/mail/u/0/?tf=cm&fs=1&to=naufalfadhiil2206@gmail.com"
@@ -105,7 +104,6 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-full hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-orange-500/25 hover:scale-105 group"
             >
-              {/* Ikon Mail di sini tetap dibutuhkan, jadi impornya harus ada */}
               <Mail className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
               Start a Conversation
             </a>

@@ -6,6 +6,15 @@ const Certifications = () => {
 
   const certifications = [
     {
+      title: 'Belajar Fundamental Aplikasi Flutter',
+      issuer: 'Dicoding Indonesia',
+      date: 'Sept 2025',
+      description:
+        'A comprehensive 90-hours course covering the fundamentals of Flutter application development, including app lifecycle, state management (Provider), networking (Web API), local storage, notifications, and automated testing. The program concludes with a final submission in the form of a fully functional application.',
+      skills: ['Fundamental Flutter', 'Dart', 'Mobile Development', 'State Management (Provider)', 'Notification & Scheduler', 'Firebase Integration'],
+      link: 'https://www.dicoding.com/certificates/EYX4K6MN5PDL',
+    },
+    {
       title: 'Belajar Membuat Aplikasi Flutter untuk Pemula',
       issuer: 'Dicoding Indonesia',
       date: 'July 2025',
@@ -22,15 +31,6 @@ const Certifications = () => {
         'Certification in fundamental Dart programming, including hands-on experience with variables, data types, control flow, collections, and OOP, culminated in a final project.',
       skills: ['Flutter', 'Dart', 'Mobile Development'],
       link: 'https://www.dicoding.com/certificates/RVZKG4L3QXD5',
-    },
-    {
-      title: 'Memulai Dasar Pemrograman untuk Menjadi Pengembang Software',
-      issuer: 'Dicoding Indonesia',
-      date: 'July 2025',
-      description:
-        'A 9-hour certification in front-end software development, focusing on the fundamentals of HTML, CSS, and JavaScript for modifying software applications based on user requirements.',
-      skills: ['SDLC', 'HTML & CSS', 'JavaScript'],
-      link: 'https://www.dicoding.com/certificates/KEXL24480ZG2',
     },
     {
       title: 'Belajar Dasar Git dengan GitHub',

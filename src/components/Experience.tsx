@@ -1,36 +1,32 @@
-import React from 'react';
-import { Calendar, MapPin } from 'lucide-react';
+import React from "react";
+import { Calendar, MapPin } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
     {
-      company: 'BEKUP Create: Upskilling Bootcamp 2025 by Dicoding',
-      position: 'Flutter Developer - Cohort',
-      period: 'Jul 2025 – Now',
-      location: 'Remote',
-      description:
-        'Developing mobile applications using Flutter framework with focus on user experience and performance optimization.',
+      company: "BEKUP Create: Upskilling Bootcamp 2025 by Dicoding",
+      position: "Flutter Developer - Cohort",
+      period: "Jul 2025 – Nov 2025",
+      duration: "5 months",
+      location: "Remote",
       current: true,
+      logo: "/logos/bekup.svg",
     },
     {
-      company: 'GDG on Campus Widyatama University',
-      position: 'Lead of Event Organizer',
-      period: 'Sep 2024 – Jul 2025',
-      duration: '11 months',
-      location: 'Bandung, Indonesia',
-      description:
-        'Leading event organization initiatives, coordinating tech workshops, and managing community engagement activities.',
+      company: "GDG on Campus Widyatama University",
+      position: "Lead of Event Organizer",
+      period: "Sep 2024 – Jul 2025",
+      duration: "11 months",
       community: true,
+      logo: "/logos/gdgoc.svg",
     },
     {
-      company: 'GDG on Campus Widyatama University',
-      position: 'Staff of Public Relations',
-      period: 'Sep 2023 – Aug 2024',
-      duration: '1 year',
-      location: 'Bandung, Indonesia',
-      description:
-        'Managing public relations activities, content creation, and community outreach programs for the developer community.',
+      company: "GDG on Campus Widyatama University",
+      position: "Staff of Public Relations",
+      period: "Sep 2023 – Aug 2024",
+      duration: "1 year",
       community: true,
+      logo: "/logos/gdgoc.svg",
     },
   ];
 
@@ -40,7 +36,7 @@ const Experience = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-orange mb-4">
-            My{' '}
+            My{" "}
             <span className="text-transparent bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text">
               Experience
             </span>
@@ -67,8 +63,8 @@ const Experience = () => {
                 <div
                   className={`absolute left-6 w-4 h-4 rounded-full border-2 ${
                     exp.current
-                      ? 'bg-orange-500 border-orange-400 shadow-lg shadow-orange-500/50'
-                      : 'bg-gray-700 border-orange-500'
+                      ? "bg-orange-500 border-orange-400 shadow-lg shadow-orange-500/50"
+                      : "bg-gray-700 border-orange-500"
                   }`}
                 >
                   {exp.current && (
@@ -80,19 +76,30 @@ const Experience = () => {
                 <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10">
                   {/* Header */}
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-1">
-                        {exp.position}
-                      </h3>
-                      <p className="text-orange-400 font-semibold">
-                        {exp.company}
-                      </p>
+                    <div className="flex items-center">
+                      {" "}
+                      {/* Tambahkan div untuk menyatukan logo dan teks */}
+                      {exp.logo && (
+                        <img
+                          src={exp.logo}
+                          alt={`${exp.company} logo`}
+                          className="w-10 h-10 mr-4 rounded-full"
+                        />
+                      )}
+                      <div>
+                        <h3 className="text-xl font-bold text-white mb-1">
+                          {exp.position}
+                        </h3>
+                        <p className="text-orange-400 font-semibold">
+                          {exp.company}
+                        </p>
+                      </div>
                     </div>
 
                     {/* Badge */}
                     {exp.current && (
                       <span className="inline-block mt-2 md:mt-0 px-3 py-1 bg-orange-500/20 text-orange-500 text-sm font-medium rounded-full border border-orange-500/30 shadow-[0_0_10px_rgba(249,115,22,0.7)]">
-                        Current
+                        Bootcamp
                       </span>
                     )}
                     {exp.community && (
@@ -113,16 +120,13 @@ const Experience = () => {
                         </span>
                       )}
                     </div>
-                    <div className="flex items-center">
-                      <MapPin size={16} className="mr-2" />
-                      <span>{exp.location}</span>
-                    </div>
+                    {exp.location && (
+                      <div className="flex items-center">
+                        <MapPin size={16} className="mr-2" />
+                        <span>{exp.location}</span>
+                      </div>
+                    )}
                   </div>
-
-                  {/* Description */}
-                  <p className="text-gray-300 leading-relaxed">
-                    {exp.description}
-                  </p>
                 </div>
               </div>
             ))}

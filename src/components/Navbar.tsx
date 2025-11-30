@@ -15,8 +15,6 @@ const Navbar = () => {
         'experience',
         'techstack',
         'projects',
-        // Perbaiki ejaan di sini
-        'highlights',
         'certifications',
         'contact',
       ];
@@ -48,7 +46,6 @@ const Navbar = () => {
     { name: 'Experience', href: '#experience', id: 'experience' },
     { name: 'Tech Stack', href: '#techstack', id: 'techstack' },
     { name: 'Projects', href: '#projects', id: 'projects' },
-    { name: 'Highlights', href: '#highlights', id: 'highlights' },
     { name: 'Certifications', href: '#certifications', id: 'certifications' },
     { name: 'Contact', href: '#contact', id: 'contact' },
   ];

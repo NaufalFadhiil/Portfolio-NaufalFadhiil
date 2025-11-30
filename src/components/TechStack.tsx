@@ -1,66 +1,69 @@
-import React from 'react';
+import React from "react";
 
 const TechStack = () => {
   const qaTechnologies = [
     {
-      name: 'Postman',
-      icon: '/logos/postman.svg',
-      category: 'API Testing',
-      color: 'from-orange-400 to-orange-600',
+      name: "Python",
+      icon: "/logos/python.svg", 
+      category: "Script Automation QA", 
+      color: "from-cyan-500 to-cyan-600", 
     },
     {
-      name: 'Google Spreadsheet',
-      icon: '/logos/spreadsheets.svg',
-      category: 'Data Management',
-      color: 'from-green-400 to-green-600',
+      name: "Postman",
+      icon: "/logos/postman.svg",
+      category: "API Testing",
+      color: "from-orange-400 to-orange-400",
     },
     {
-      name: 'Google Docs',
-      icon: '/logos/docs.svg',
-      category: 'Documentation',
-      color: 'from-blue-400 to-blue-600',
+      name: "Playwright",
+      icon: "/logos/playwright.svg", 
+      category: "E2E Testing", 
+      color: "from-red-400 to-red-500", 
     },
     {
-      name: 'Notion',
-      icon: '/logos/notion.svg',
-      category: 'Project Management',
-      color: 'from-gray-400 to-gray-600',
+      name: "Google Spreadsheet",
+      icon: "/logos/spreadsheets.svg",
+      category: " Test Data Management",
+      color: "from-green-400 to-green-600",
+    },
+    {
+      name: "Notion",
+      icon: "/logos/notion.svg",
+      category: "Project Management",
+      color: "from-gray-400 to-gray-600",
     },
   ];
 
   const flutterTechnologies = [
     {
-      name: 'Flutter',
-      icon: '/logos/flutter.svg',
-      category: 'Mobile Development',
-      color: 'from-blue-400 to-blue-600',
+      name: "Flutter",
+      icon: "/logos/flutter.svg",
+      category: "Mobile Cross Platform",
+      color: "from-blue-400 to-blue-600",
     },
     {
-      name: 'Dart',
-      icon: '/logos/dart.svg',
-      category: 'Programming Language',
-      color: 'from-cyan-400 to-cyan-600',
+      name: "Dart",
+      icon: "/logos/dart.svg",
+      category: "Programming Language",
+      color: "from-cyan-400 to-cyan-600",
     },
     {
-      name: 'Firebase',
-      icon: '/logos/firebase.svg',
-      category: 'Backend as a Service',
-      color: 'from-yellow-400 to-orange-500',
+      name: "Firebase",
+      icon: "/logos/firebase.svg",
+      category: "Backend as a Service",
+      color: "from-yellow-400 to-orange-500",
     },
   ];
 
   const renderCard = (tech, index) => (
     <div
       key={tech.name}
-      className="group bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 
-                 hover:border-orange-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10 
-                 hover:scale-105 animate-slide-up relative"
+      className="group bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10 hover:scale-105 animate-slide-up relative"
       style={{ animationDelay: `${index * 100}ms` }}
     >
       {/* Icon */}
       <div
-        className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${tech.color} mb-4 
-                    group-hover:scale-110 transition-transform duration-300`}
+        className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${tech.color} mb-4 group-hover:scale-110 transition-transform duration-300`}
       >
         <img src={tech.icon} alt={`${tech.name} Logo`} className="w-8 h-8" />
       </div>
@@ -72,10 +75,7 @@ const TechStack = () => {
       <p className="text-gray-400 text-sm">{tech.category}</p>
 
       {/* Hover Overlay */}
-      <div
-        className="absolute inset-0 bg-gradient-to-r from-orange-500/0 via-orange-500/5 to-orange-500/0 
-                   rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-      ></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-orange-500/0 via-orange-500/5 to-orange-500/0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
     </div>
   );
 
@@ -85,7 +85,7 @@ const TechStack = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Tech Stack{' '}
+            Tech Stack{" "}
             <span className="text-transparent bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text">
               I Use
             </span>

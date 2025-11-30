@@ -1,36 +1,68 @@
-import React from 'react';
-import { Github, ExternalLink, Bug } from 'lucide-react';
+import React from "react";
+// Import ikon Folder dan hapus ExternalLink jika tidak digunakan di tempat lain
+import { Github, Bug, Folder } from "lucide-react"; 
 
 const Projects = () => {
+  const ICON_SIZE = "w-10 h-10"; // Ukuran baru untuk logo
+  const BUG_ICON_SIZE = "w-8 h-8"; // Ukuran ikon Bug tetap, atau disamakan jika w-10 h-10 terasa pas
+
   const projects = [
     {
-      title: 'VillaNaKey',
-      type: 'Flutter Project',
+      title: "VillaNaKey",
+      type: "Flutter Project",
       description:
-        'A comprehensive mobile application built with Flutter for villa booking and management. Features user authentication, booking system, and real-time notifications.',
-      icon: <span className="text-4xl">📱</span>, // emoji untuk Flutter
-      techStack: ['Flutter', 'Dart', 'Firebase'],
-      githubUrl: 'https://github.com/NaufalFadhiil/villaNaKey.git',
-      color: 'from-blue-400 to-blue-600',
-      bgGradient: 'from-blue-500/20 to-purple-500/20',
+      "Aplikasi mobile berbasis Flutter untuk reservasi villa yang memudahkan pengguna dengan langsung pesan dari ponsel mereka. Dilengkapi dengan autentikasi pengguna, dan sistem pemesanan.", 
+      icon: (
+        <img
+          src="/logos/villanakey_logo.svg"
+          alt="VillaNaKey Logo"
+          className={ICON_SIZE} 
+        />
+      ),
+      techStack: ["Flutter", "Dart", "Firebase", "Provider"],
+      githubUrl: "https://github.com/NaufalFadhiil/villaNaKey.git",
+      color: "from-blue-400 to-blue-600",
+      bgGradient: "from-blue-500/20 to-purple-500/20",
     },
     {
-      title: 'Testing API - Books',
-      type: 'QA Project',
+      title: "WargaKita APP",
+      type: "Flutter Project",
+      description: (
+        <>
+          WargaKita App adalah Aplikasi yang membantu koordinasi kegiatan acara
+          dan peminjaman barang antar warga.
+          <br />
+          🏆4th Best Capstone Project BEKUP 2025
+        </>
+      ),
+      icon: (
+        <img
+          src="/logos/wargakita_logo.svg"
+          alt="WargaKita App Logo"
+          className={ICON_SIZE} 
+        />
+      ),
+      techStack: ["Flutter", "Dart", "Firebase Auth", "Provider"],
+      githubUrl: "https://github.com/NaufalFadhiil/WargaKitaAPP",
+      color: "from-blue-400 to-blue-600",
+      bgGradient: "from-blue-500/20 to-purple-500/20",
+    },
+    {
+      title: "Testing API - Books",
+      type: "QA Project",
       description:
-        'Comprehensive API testing project using Fake REST API for books management. Includes test cases, documentation, and automated testing scenarios.',
-      icon: <Bug className="w-8 h-8" />, // icon bug untuk QA
-      techStack: ['Postman', 'Google Spreadsheet', 'Google Docs'],
+      "Proyek pengujian API menggunakan Fake REST API pada manajemen buku. Mencakup Test case, Skenario Test, dan Dokumentasi.",  
+      icon: <Bug className={BUG_ICON_SIZE} />, 
+      techStack: ["Postman", "Google Spreadsheet", "Google Docs"],
       driveUrl:
-        'https://drive.google.com/drive/folders/1YK7xKnHyPtaA9BrrUs3foOyAZwNUNnBV?usp=sharing',
-      color: 'from-green-400 to-green-600',
-      bgGradient: 'from-green-500/20 to-teal-500/20',
+        "https://drive.google.com/drive/folders/1YK7xKnHyPtaA9BrrUs3foOyAZwNUNnBV?usp=sharing",
+      color: "from-green-400 to-green-600",
+      bgGradient: "from-green-500/20 to-teal-500/20",
     },
   ];
 
-  // Pisahkan QA & Flutter
-  const qaProjects = projects.filter((p) => p.type.includes('QA'));
-  const flutterProjects = projects.filter((p) => p.type.includes('Flutter'));
+  const qaProjects = projects.filter((p) => p.type.includes("QA"));
+  const flutterProjects = projects.filter((p) => p.type.includes("Flutter"));
 
   const renderCard = (project, index) => (
     <div
@@ -48,9 +80,14 @@ const Projects = () => {
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div
-            className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${project.color} group-hover:scale-110 transition-transform duration-300`}
+            className={`inline-flex rounded-lg group-hover:scale-110 transition-transform duration-300 
+            ${
+              project.type === "QA Project"
+                ? `p-3 bg-gradient-to-br ${project.color}` // QA Project: Tetap pakai p-3 dan background
+                : "p-0" // Flutter Project: Hapus padding (p-0) dan background
+            }`}
           >
-            <div className="text-orange">{project.icon}</div>
+            {project.icon}
           </div>
           <span className="px-3 py-1 bg-orange-500/20 text-orange text-sm font-medium rounded-full border border-orange-500/30">
             {project.type}
@@ -97,8 +134,9 @@ const Projects = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-full hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-orange-500/25 group/btn"
             >
-              <ExternalLink className="mr-2 h-5 w-5 group-hover/btn:rotate-12 transition-transform duration-300" />
-              View Project
+              {/* PERUBAHAN IKON: ExternalLink diganti menjadi Folder */}
+              <Folder className="mr-2 h-5 w-5 group-hover/btn:rotate-12 transition-transform duration-300" />
+              View on Google Drive 
             </a>
           )}
         </div>
@@ -115,7 +153,7 @@ const Projects = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-orange mb-4">
-            Featured{' '}
+            Featured{" "}
             <span className="text-transparent bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text">
               Projects
             </span>

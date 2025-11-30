@@ -1,26 +1,26 @@
-import React, { useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+import React, { useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
-import TechStack from './components/TechStack';
-import Projects from './components/Projects';
-import Achievements from './components/Highlights';
-import Certifications from './components/Certifications';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Experience from './components/Experience';
+import TechStack from "./components/TechStack";
+import Projects from "./components/Projects";
+
+import Certifications from "./components/Certifications";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Experience from "./components/Experience";
 
 function App() {
   useEffect(() => {
     // Set page title
     document.title =
-      'Naufal Fadhiil - Portfolio | Junior QA & Flutter Developer';
+      "Naufal Fadhiil - Portfolio | Junior QA & Flutter Developer";
 
     // Add smooth scrolling behavior
-    document.documentElement.style.scrollBehavior = 'smooth';
+    document.documentElement.style.scrollBehavior = "smooth";
 
     return () => {
-      document.documentElement.style.scrollBehavior = 'auto';
+      document.documentElement.style.scrollBehavior = "auto";
     };
   }, []);
 
@@ -40,7 +40,6 @@ function App() {
         <Experience />
         <TechStack />
         <Projects />
-        <Achievements />
         <Certifications />
         <Contact />
         <Footer />
